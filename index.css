@@ -1,0 +1,63 @@
+.navbar {
+  background-color: #000000;
+}
+.navbar .navbar-brand {
+  padding: 5px 15px;
+}
+.navbar .navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+.navbar li a {
+  color: #FFFFFF;
+}
+.navbar li a:hover,
+.navbar li a:active,
+.navbar li a:focus {
+  color: #337ab7;
+  background-color: transparent;
+}
+.navbar.navbar-bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+.navbar.navbar-bottom img {
+  width: 80px;
+  height: 80px;
+  margin-left: 6px;
+  margin-right: 3px;
+}
+.about,
+.contact,
+.home,
+.resume {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  color: #eee;
+}
+.about > img,
+.contact > img,
+.home > img,
+.resume > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+.about .title,
+.contact .title,
+.home .title,
+.resume .title {
+  color: #9daab0;
+}

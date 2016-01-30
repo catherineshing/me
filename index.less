@@ -1,0 +1,79 @@
+.navbar {
+    background-color: #000000;
+
+    .navbar-brand {
+        padding: 5px 15px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    li {
+        a {
+            color: #FFFFFF;
+
+            &:hover, &:active, &:focus {
+                color: #337ab7;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.navbar-bottom {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        color: #FFFFFF;
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-left: 6px;
+            margin-right: 3px;
+        }
+    }
+}
+
+.about, .contact, .home, .resume {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    color: #eee;
+
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        min-width: 50%;
+        min-height: 50%;
+    }
+
+    .title {
+        color: #9daab0;
+    }
+}
+
+.about {
+    
+}
+
+.contact {
+
+}
+
+.home {
+    
+}
+
+.resume {
+
+}
