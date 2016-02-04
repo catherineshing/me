@@ -36,9 +36,7 @@
   padding: 5px 20px;
 }
 .navbar.navbar-bottom {
-  position: absolute;
   width: 100%;
-  bottom: 0;
   margin-bottom: 0;
   border-radius: 0;
   color: #FFFFFF;
@@ -49,50 +47,47 @@
   margin-left: 6px;
   margin-right: 3px;
 }
-.background {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  overflow-y: auto;
+.view .parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-.background img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
+.view .content {
+  padding: 20px 0 30px;
 }
-.about,
-.contact,
-.home,
-.resume {
-  padding-top: 50px;
+.view .container {
+  max-width: 960px;
+  margin: 0 auto;
 }
-.about .thumbnail {
-  margin-top: 30px;
+.view .about .parallax {
+  background-image: url('rsrc/about.jpg');
 }
-.about .thumbnail h3 {
-  margin-top: 10px;
-}
-.resume {
+.view .about .thumbnail {
   margin-top: 20px;
 }
-.resume .btn {
+.view .contact .parallax {
+  background-image: url('rsrc/contact.jpg');
+}
+.view .home .parallax {
+  background-image: url('rsrc/home.jpg');
+}
+.view .resume .parallax {
+  background-image: url('rsrc/resume.jpg');
+}
+.view .resume .btn {
   font-size: 23px;
   padding: 2px 6px 0;
+  margin-left: 10px;
   margin-right: 5px;
 }
-.resume h4 {
+.view .resume h4 {
   text-decoration: underline;
 }
-.resume .section {
+.view .resume .section {
   padding-bottom: 15px;
 }
-.resume .section .subsection:not(:last-child) {
+.view .resume .section .subsection:not(:last-child) {
   padding-bottom: 20px;
 }

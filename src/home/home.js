@@ -3,7 +3,8 @@
 angular.module('me.home', [])
 
     .controller('HomeController', [
-        function() {
-
+        '$window',
+        function($window) {
+            this.height = $window.innerHeight;
         }
     ]);

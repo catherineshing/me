@@ -1,53 +1,56 @@
 <div class="resume" ng-controller="ResumeController as resume">
-    <div class="col-xs-7"></div>
-    <div class="col-xs-5">
-        <div class="links">
-            <button class="btn btn-default" ng-click="resume.download()">
-                <i class="glyphicon glyphicon-download"></i>
-            </button>
-            <a href="https://www.linkedin.com/in/catherineshing" target="_blank" title="Download">
-                <img src="./rsrc/linkedin.png" />
-            </a>
-        </div>
+    <div class="parallax">
+        <div class="container"></div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2>
+                <span ng-bind="$root.name"></span>
+                <button class="btn btn-default" ng-click="resume.download()">
+                    <i class="glyphicon glyphicon-download"></i>
+                </button>
+                <a href="https://www.linkedin.com/in/catherineshing" target="_blank" title="Download">
+                    <img src="./rsrc/linkedin.png" />
+                </a>
+            </h2>
 
-        <!-- <h2 ng-bind="$root.name"></h2> -->
-
-        <!-- Experience -->
-        <div class="section">
-            <h4>Technical Experience</h4>
-            <div ng-repeat="experience in resume.experience">
-                <strong>{{experience.title}}: </strong>
-                <span ng-repeat="tool in experience.tools">{{tool}}{{$last ? '' : ', '}}</span>
+            <!-- Experience -->
+            <div class="section">
+                <h4>Technical Experience</h4>
+                <div ng-repeat="experience in resume.experience">
+                    <strong>{{experience.title}}: </strong>
+                    <span ng-repeat="tool in experience.tools">{{tool}}{{$last ? '' : ', '}}</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Employment -->
-        <div class="section">
-            <h4>Employment History</h4>
-            <div class="subsection" ng-repeat="employment in resume.employment">
+            <!-- Employment -->
+            <div class="section">
+                <h4>Employment History</h4>
+                <div class="subsection" ng-repeat="employment in resume.employment">
+                    <div class="title">
+                        <strong>{{employment.company}}, </strong>
+                        <span ng-bind="employment.location"></span>
+                        <span>({{employment.startDate | date: 'M/yyyy'}} - {{!employment.endDate ? 'Present' : (employment.endDate | date: 'M/yyyy')}})</span>
+                    </div>
+                    <div class="subtitle">
+                        <strong ng-bind="employment.title"></strong>
+                        <span ng-if="employment.team">({{employment.team}})</span>
+                    </div>
+                    <div class="details" ng-repeat="task in employment.tasks">
+                        - {{task}}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h4>Education</h4>
                 <div class="title">
-                    <strong>{{employment.company}}, </strong>
-                    <span ng-bind="employment.location"></span>
-                    <span>({{employment.startDate | date: 'M/yyyy'}} - {{!employment.endDate ? 'Present' : (employment.endDate | date: 'M/yyyy')}})</span>
+                    <strong ng-bind="resume.education.university"></strong>
+                    <span>({{resume.education.graduatedDate | date: 'yyyy'}})</span>
                 </div>
-                <div class="subtitle">
-                    <strong ng-bind="employment.title"></strong>
-                    <span ng-if="employment.team">({{employment.team}})</span>
-                </div>
-                <div class="details" ng-repeat="task in employment.tasks">
-                    - {{task}}
-                </div>
+                <strong ng-bind="resume.education.degree"></strong>
             </div>
-        </div>
-
-        <!-- Education -->
-        <div class="section">
-            <h4>Education</h4>
-            <div class="title">
-                <strong ng-bind="resume.education.university"></strong>
-                <span>({{resume.education.graduatedDate | date: 'yyyy'}})</span>
-            </div>
-            <strong ng-bind="resume.education.degree"></strong>
         </div>
     </div>
 </div>

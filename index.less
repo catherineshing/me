@@ -43,9 +43,7 @@
     }
 
     &.navbar-bottom {
-        position: absolute;
         width: 100%;
-        bottom: 0;
         margin-bottom: 0;
         border-radius: 0;
         color: #FFFFFF;
@@ -59,66 +57,68 @@
     }
 }
 
-.background {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    overflow-y: auto;
-
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        min-width: 50%;
-        min-height: 50%;
+.view {
+    .parallax {
+        height: 600px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
-}
 
-.about, .contact, .home, .resume {
-    padding-top: 50px;
-}
+    .content {
+        padding: 20px 0 30px;
+    }
 
-.about {
-    .thumbnail {
-        margin-top: 30px;
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
 
-        h3 {
-            margin-top: 10px;
+    .about {
+        .parallax {
+            background-image: url('./rsrc/about.jpg');
+        }
+
+        .thumbnail {
+            margin-top: 20px;
         }
     }
-}
 
-.contact {
-
-}
-
-.home {
-
-}
-
-.resume {
-    margin-top: 20px;
-
-    .btn {
-        font-size: 23px;
-        padding: 2px 6px 0;
-        margin-right: 5px;
+    .contact {
+        .parallax {
+            background-image: url('./rsrc/contact.jpg');
+        }
     }
 
-    h4 {
-        text-decoration: underline;
+    .home {
+        .parallax {
+            background-image: url('./rsrc/home.jpg');
+        }
     }
 
-    .section {
-        padding-bottom: 15px;
+    .resume {
+        .parallax {
+            background-image: url('./rsrc/resume.jpg');;
+        }
 
-        .subsection:not(:last-child) {
-            padding-bottom: 20px;
+        .btn {
+            font-size: 23px;
+            padding: 2px 6px 0;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        h4 {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding-bottom: 15px;
+
+            .subsection:not(:last-child) {
+                padding-bottom: 20px;
+            }
         }
     }
 }
