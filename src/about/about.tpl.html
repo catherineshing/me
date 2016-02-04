@@ -1,10 +1,15 @@
 <div class="about" ng-controller="AboutController as about">
-    <img src="./rsrc/about.jpg">
-    <div class="row">
-        <h4 class="col-sm-3 text-right title" ng-bind="'about' | uppercase"></h4>
-        <div class="col-sm-9">
-            <h4 ng-bind="about.intro"></h4>
-            <h5 ng-repeat="detail in about.details" ng-bind="detail"></h5>
+    <div class="col-sm-4 col-xs-5">
+        <div class="thumbnail">
+            <img src="./rsrc/me.jpg" />
+
+            <div class="caption">
+                <div ng-if="about.showMore">
+                    <h3 ng-bind="$root.name"></h3>
+                    <h4 ng-bind="about.title"></h4>
+                    <div ng-bind="about.description"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

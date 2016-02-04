@@ -30,4 +30,19 @@ angular.module('me', [
                     redirectTo: '/home'
                 });
         }
+    ])
+
+    .controller('IndexController', [
+        '$rootScope',
+        function($rootScope) {
+            var that = this;
+
+            $rootScope.name = 'Catherine Shing';
+
+            this.view = 'home';
+
+            this.loadView = function(view) {
+                that.view = view;
+            };
+        }
     ]);

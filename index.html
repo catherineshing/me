@@ -11,32 +11,57 @@
 
         <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
         <link rel="stylesheet" href="./index.css" />
-
-        <!-- <base href="/"/> -->
     </head>
     <body>
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#home">
-                        <img src="./rsrc/cs.png">
-                    </a>
+        <div ng-controller="IndexController as index">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#home" ng-click="index.loadView('home')">
+                            <img src="./rsrc/cs.png">
+                        </a>
+                        <div class="navbar-toggle collapsed">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" ng-click="showDropdown = !showDropdown">
+                                    <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                </a>
+                                <ul class="dropdown-menu" ng-style="{display: (showDropdown ? 'block' : 'none')}">
+                                    <li ng-class="{active: index.view === 'home'}">
+                                        <a href="#home" ng-click="index.loadView('home'); showDropdown = false"><i class="glyphicon glyphicon-home"></i></a>
+                                    </li>
+                                    <li ng-class="{active: index.view === 'about'}">
+                                        <a href="#about" ng-click="index.loadView('about'); showDropdown = false"><i class="glyphicon glyphicon-info-sign"></i></a>
+                                    </li>
+                                    <li ng-class="{active: index.view === 'resume'}">
+                                        <a href="#resume" ng-click="index.loadView('resume'); showDropdown = false"><i class="glyphicon glyphicon-list-alt"></i></a>
+                                    </li>
+                                    <li ng-class="{active: index.view === 'contact'}">
+                                        <a href="#contact" ng-click="index.loadView('contact'); showDropdown = false"><i class="glyphicon glyphicon-envelope"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li ng-class="{active: index.view === 'about'}">
+                                <a href="#about" ng-click="index.loadView('about')">About</a>
+                            </li>
+                            <li ng-class="{active: index.view === 'resume'}">
+                                <a href="#resume" ng-click="index.loadView('resume')">Resume</a>
+                            </li>
+                            <li ng-class="{active: index.view === 'contact'}">
+                                <a href="#contact" ng-click="index.loadView('contact')">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#resume">Resume</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            </nav>
+
+            <div class="background">
+                <img ng-src="./rsrc/{{index.view}}.jpg">
             </div>
-        </nav>
+        </div>
 
         <div ng-view></div>
 

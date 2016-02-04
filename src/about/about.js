@@ -3,15 +3,21 @@
 angular.module('me.about', [])
 
     .controller('AboutController', [
-        function() {
-            console.log('about');
+        '$scope',
+        '$timeout',
+        function($scope, $timeout) {
+            var that = this;
 
-            this.intro = 'hello world';
+            this.title = 'Front-End Developer';
 
-            this.details = [
-                'Born and raised in the Bay Area',
-                'Loves dogs',
-                'Fantasy Football Champion 2013, 2015'
-            ];
+            this.description = 'I am a Bay Area native and UCSD alum. I have ' +
+                (new Date().getFullYear() - 2012).toString() +
+                ' years of experience working with a variety of technologies like Angular, Node, Java, and PHP. When I\'m not coding, I enjoy hanging out with my dog Bernie, eating good food, and kicking butt in Fantasy Football.';
+
+
+            $timeout(function() {
+                that.showMore = true;
+                $scope.$apply();
+            }, 2000);
         }
     ]);

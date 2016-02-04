@@ -13,16 +13,37 @@
     li {
         a {
             color: #FFFFFF;
+        }
 
-            &:hover, &:active, &:focus {
-                color: #337ab7;
-                background-color: transparent;
+        &.active a, &.active a:hover, a:hover, a:focus {
+            color: #1C9DA6;
+            background-color: transparent;
+        }
+    }
+
+    .navbar-toggle {
+        margin-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 0;
+        font-size: 16px;
+
+        .dropdown-toggle {
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            background-color: #000000;
+            left: -20px;
+
+            & > li > a {
+                padding: 5px 20px;
             }
         }
     }
 
     &.navbar-bottom {
-        position: fixed;
+        position: absolute;
         width: 100%;
         bottom: 0;
         margin-bottom: 0;
@@ -30,23 +51,23 @@
         color: #FFFFFF;
 
         img {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             margin-left: 6px;
             margin-right: 3px;
         }
     }
 }
 
-.about, .contact, .home, .resume {
+.background {
     position: fixed;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    color: #eee;
+    overflow-y: auto;
 
-    > img {
+    img {
         position: absolute;
         top: 0;
         left: 0;
@@ -56,14 +77,20 @@
         min-width: 50%;
         min-height: 50%;
     }
+}
 
-    .title {
-        color: #9daab0;
-    }
+.about, .contact, .home, .resume {
+    padding-top: 50px;
 }
 
 .about {
-    
+    .thumbnail {
+        margin-top: 30px;
+
+        h3 {
+            margin-top: 10px;
+        }
+    }
 }
 
 .contact {
@@ -71,9 +98,27 @@
 }
 
 .home {
-    margin-top: 40px;
+
 }
 
 .resume {
+    margin-top: 20px;
 
+    .btn {
+        font-size: 23px;
+        padding: 2px 6px 0;
+        margin-right: 5px;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+
+    .section {
+        padding-bottom: 15px;
+
+        .subsection:not(:last-child) {
+            padding-bottom: 20px;
+        }
+    }
 }
