@@ -4,15 +4,18 @@
     </div>
     <div class="content">
         <div class="container">
-            <div class="col-xs-3">
+            <div class="col-sm-4 col-xs-3"></div>
+            <div class="col-sm-4 col-xs-6">
                 <div class="thumbnail">
-                    <img src="./rsrc/me.jpg" />
+                    <img class="img-circle" src="./rsrc/me.jpg" />
                 </div>
             </div>
-            <div class="col-xs-9">
-                <h3 ng-bind="$root.name"></h3>
-                <h4 ng-bind="about.title"></h4>
-                <div ng-bind="about.description"></div>
+            <div class="col-sm-4 col-xs-3"></div>
+
+            <div class="col-xs-12">
+                <h3 class="text-center" ng-bind="$root.name"></h3>
+                <h4 class="text-center" ng-bind="about.title"></h4>
+                <div class="description" ng-bind="about.description"></div>
             </div>
         </div>
     </div>

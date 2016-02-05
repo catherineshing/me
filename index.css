@@ -66,12 +66,19 @@
 }
 .view .about .thumbnail {
   margin-top: 20px;
+  margin-bottom: -5px;
+  border-radius: 50%;
+}
+.view .about .description {
+  padding-top: 10px;
+  line-height: 28px;
 }
 .view .contact .parallax {
   background-image: url('rsrc/contact.jpg');
 }
 .view .home .parallax {
   background-image: url('rsrc/home.jpg');
+  background-position: 35% 35%;
 }
 .view .resume .parallax {
   background-image: url('rsrc/resume.jpg');
