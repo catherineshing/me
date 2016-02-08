@@ -1,11 +1,10 @@
+/*jslint node: true */
 'use strict';
 
 angular.module('me.about', [])
 
     .controller('AboutController', [
         function() {
-            var that = this;
-
             this.title = 'Front-End Developer';
 
             this.description = 'I am a Bay Area native and UC San Diego alum. I have ' +

@@ -60,7 +60,6 @@
 .view {
     .parallax {
         height: 600px;
-        background-position: 50% 50%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -78,6 +77,7 @@
     .about {
         .parallax {
             background-image: url('./rsrc/about.jpg');
+            background-position: 50% 100%;
         }
 
         .thumbnail {
@@ -95,19 +95,32 @@
     .contact {
         .parallax {
             background-image: url('./rsrc/contact.jpg');
+            background-position: 80% 100%;
+        }
+
+        form {
+            padding: 15px 0 10px;
+
+            textarea {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 80px;
+                max-height: 180px;
+            }
         }
     }
 
     .home {
         .parallax {
             background-image: url('./rsrc/home.jpg');
-            background-position: 35% 35%;
+            background-position: 50% 35%;
         }
     }
 
     .resume {
         .parallax {
-            background-image: url('./rsrc/resume.jpg');;
+            background-image: url('./rsrc/resume.jpg');
+            background-position: 40% 100%;
         }
 
         .btn {

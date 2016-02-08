@@ -33,8 +33,9 @@ angular.module('me', [
     ])
 
     .controller('IndexController', [
+        '$anchorScroll',
         '$rootScope',
-        function($rootScope) {
+        function($anchorScroll, $rootScope) {
             var that = this;
 
             $rootScope.name = 'Catherine Shing';
@@ -43,6 +44,7 @@ angular.module('me', [
 
             this.loadView = function(view) {
                 that.view = view;
+                $anchorScroll();
             };
         }
     ]);
