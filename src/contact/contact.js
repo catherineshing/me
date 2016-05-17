@@ -4,20 +4,17 @@
 angular.module('me.contact', [])
 
     .controller('ContactController', [
-        '$http',
-        function($http) {
+        '$sce',
+        function($sce) {
             var that = this;
 
-            this.submit = function() {
-                if (!that.spam) {
-                    $http.post('./src/contact/contact.php', {
-                        name: that.name,
-                        email: that.email,
-                        message: that.message
-                    }).then(function() {
-                        that.sent = true;
-                    });
-                }
+            this.actionUrl = '';
+
+            this.updateActionUrl = function() {
+                that.actionUrl = $sce.trustAsResourceUrl('https://docs.google.com/forms/d/1E1zYwFsiVTnXFLPQoyu_p34LUTRGdSQHut5km3eNjok/formResponse?' +
+                    'entry.549975105=' + that.name +
+                    '&entry.364966672=' + that.email +
+                    '&entry.1159796349=' + that.message);
             };
         }
     ]);

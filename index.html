@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet/less" type="text/css" href="./index.less" />
     </head>
     <body>
         <div ng-controller="IndexController as index">
@@ -22,21 +22,21 @@
                         </a>
                         <div class="navbar-toggle collapsed">
                             <div class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" ng-click="showDropdown = !showDropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" ng-click="index.showDropdown = !index.showDropdown">
                                     <i class="glyphicon glyphicon-menu-hamburger"></i>
                                 </a>
-                                <ul class="dropdown-menu" ng-style="{display: (showDropdown ? 'block' : 'none')}">
+                                <ul class="dropdown-menu" ng-style="{display: (index.showDropdown ? 'block' : 'none')}">
                                     <li ng-class="{active: index.view === 'home'}">
-                                        <a href="#home" ng-click="index.loadView('home'); showDropdown = false"><i class="glyphicon glyphicon-home"></i></a>
+                                        <a href="#home" ng-click="index.loadView('home')"><i class="glyphicon glyphicon-home"></i></a>
                                     </li>
                                     <li ng-class="{active: index.view === 'about'}">
-                                        <a href="#about" ng-click="index.loadView('about'); showDropdown = false"><i class="glyphicon glyphicon-info-sign"></i></a>
+                                        <a href="#about" ng-click="index.loadView('about')"><i class="glyphicon glyphicon-info-sign"></i></a>
                                     </li>
                                     <li ng-class="{active: index.view === 'resume'}">
-                                        <a href="#resume" ng-click="index.loadView('resume'); showDropdown = false"><i class="glyphicon glyphicon-list-alt"></i></a>
+                                        <a href="#resume" ng-click="index.loadView('resume')"><i class="glyphicon glyphicon-list-alt"></i></a>
                                     </li>
                                     <li ng-class="{active: index.view === 'contact'}">
-                                        <a href="#contact" ng-click="index.loadView('contact'); showDropdown = false"><i class="glyphicon glyphicon-envelope"></i></a>
+                                        <a href="#contact" ng-click="index.loadView('contact')"><i class="glyphicon glyphicon-envelope"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -69,10 +69,10 @@
             </div>
         </nav>
 
-        
         <script src="./lib/js/angular.min.js"></script>
         <script src="./lib/js/angular-route.min.js"></script>
         <script src="./lib/js/ui-bootstrap-tpls.min.js"></script>
+        <script src="./lib/js/less.min.js"></script>
 
         <script src="./index.js"></script>
         <script src="./src/about/about.js"></script>

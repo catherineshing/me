@@ -5,12 +5,6 @@ angular.module('me.resume', [])
 
     .controller('ResumeController', [
         function() {
-            var that = this;
-
-            this.download = function() {
-                console.log('download resume...');
-            };
-
             this.experience = [
                 {
                     title: 'Development Setup',
@@ -56,7 +50,6 @@ angular.module('me.resume', [])
                         'Eclipse',
                         'JIRA',
                         'Subversion',
-                        'Jenkins',
                         'API design'
                     ]
                 }
@@ -70,15 +63,11 @@ angular.module('me.resume', [])
                     title: 'Software Engineer',
                     team: 'Enterprise Team',
                     tasks: [
-                        'Lorem ipsum blah blah blah',
-                        'asdfasdf qwerqwer',
-                        'zxcvxcvqwerqwerasdf',
-                        'Lorem ipsum blah blah blahx',
-                        'asdfasdf qwerqwerq',
-                        'zxcvxcvqwerqwerasdfq',
-                        'Lorem ipsum blah blah blahxq',
-                        'asdfasdf qwerqwerqq',
-                        'zxcvxcvqwerqwerasdfqq'
+                        'Built a variety of responsive widgets and web applications using AngularJS, Node.js, Express, Bootstrap, Less, and Jasmine.',
+                        'Developed internal Tasks dashboard for the account management team to service both Enterprise and Small Business customers. This dashboard completely replaced the team\'s use of Salesforce for contact management, activity history, notes, account settings, and more.',
+                        'Built highly performant Business Listings application to compare businesses\' profiles with listing information on industry-specific websites such as Cars.com and WebMD.',
+                        'Created Facebook \'Customer Reviews\' App using PHP, jQuery, and Javascript for businesses to display positive testimonials on their Facebook page and allow visitors to request an appointment with the business.',
+                        'Wrote backend functionality for a variety of features using Java, PHP, Ruby, Spring, TestNG, JUnit, and more.'
                     ]
                 },
                 {

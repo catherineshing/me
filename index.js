@@ -44,6 +44,7 @@ angular.module('me', [
 
             this.loadView = function(view) {
                 that.view = view;
+                that.showDropdown = false;
                 $anchorScroll();
             };
         }
