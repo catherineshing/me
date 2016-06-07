@@ -3,7 +3,7 @@
         <div class="container"></div>
     </div>
     <div class="content">
-        <div class="container" ng-if="!contact.sent">
+        <div class="container" ng-show="!contact.sent">
             <div class="col-sm-12 text-center">
                 <h3>{{'say \'hello!\'' | uppercase}}</h3>
             </div>
@@ -32,6 +32,13 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Company</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="company" class="form-control" ng-model="contact.company" ng-change="contact.updateActionUrl()">
+                    </div>
+                </div>
+
                 <div class="form-group" ng-class="{'has-error': !form.message.$pristine && form.message.$invalid}">
                     <label class="col-sm-3 control-label">Message</label>
                     <div class="col-sm-6">
@@ -44,15 +51,15 @@
                 </div>
 
                 <div class="col-sm-6 col-sm-offset-3 text-center">
-                    <button type="submit" class="btn btn-lg btn-primary" ng-click="contact.sent = true" ng-disabled="form.$invalid">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-primary" ng-click="contact.send()" ng-disabled="form.$invalid">Submit</button>
                 </div>
             </form>
         </div>
 
-        <div class="container text-center thanks" ng-if="contact.sent">
-            <h3>Thanks {{contact.name}}! I'll be in touch soon!</h3>
+        <div class="container text-center thanks" ng-show="contact.sent">
+            <h3>Thanks, {{contact.name}}!<br>I'll be in touch soon!</h3>
         </div>
 
-        <iframe id="contact-iframe" name="contact-iframe"></iframe>
+        <iframe name="contact-iframe"></iframe>
     </div>
 </div>

@@ -2,13 +2,14 @@
 <html ng-app="me">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
         <title>catherineshing</title>
 
         <meta name="description" content="A little bit about me">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="icon" href="./rsrc/cs-black.png">
         <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
         <link rel="stylesheet/less" type="text/css" href="./index.less" />
     </head>
@@ -18,7 +19,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#home" ng-click="index.loadView('home')">
-                            <img src="./rsrc/cs.png">
+                            <img src="./rsrc/cs.png" alt="CS">
                         </a>
                         <div class="navbar-toggle collapsed">
                             <div class="dropdown">
@@ -64,7 +65,7 @@
         <nav class="navbar navbar-bottom">
             <div class="container">
                 <div class="text-center">
-                    catherine<img src="./rsrc/cs.png">shing
+                    catherine<img src="./rsrc/cs.png" alt="CS">shing
                 </div>
             </div>
         </nav>
@@ -72,7 +73,7 @@
         <script src="./lib/js/angular.min.js"></script>
         <script src="./lib/js/angular-route.min.js"></script>
         <script src="./lib/js/ui-bootstrap-tpls.min.js"></script>
-        <script src="./lib/js/less.min.js"></script>
+        <script src="./lib/js/less.min.js" data-log-level="1"></script>
 
         <script src="./index.js"></script>
         <script src="./src/about/about.js"></script>
