@@ -2,7 +2,8 @@
 
 angular.module('me', [
     'ngRoute',
-    'ui.bootstrap', 
+    'angular-clipboard',
+    'ui.bootstrap',
     'me.about',
     'me.contact',
     'me.home',
@@ -27,7 +28,7 @@ angular.module('me', [
                     templateUrl: './src/resume/resume.tpl.html'
                 })
                 .otherwise({
-                    redirectTo: '/home'
+                    redirectTo: '/about'
                 });
         }
     ])
@@ -40,7 +41,7 @@ angular.module('me', [
 
             $rootScope.name = 'Catherine Shing';
 
-            this.view = 'home';
+            this.view = 'about';
 
             this.loadView = function(view) {
                 that.view = view;

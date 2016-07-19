@@ -7,7 +7,7 @@ angular.module('me.resume', [])
         function() {
             this.experience = [
                 {
-                    title: 'Development Setup',
+                    title: 'Development',
                     tools: [
                         'OS X',
                         'Sublime Text',
