@@ -35,11 +35,11 @@ angular.module('me', [
 
     .controller('IndexController', [
         '$anchorScroll',
-        '$scope',
-        function($anchorScroll, $scope) {
+        '$rootScope',
+        function($anchorScroll, $rootScope) {
             var that = this;
 
-            $scope.name = 'Catherine Shing';
+            $rootScope.name = 'Catherine Shing';
 
             this.view = 'home';
 
