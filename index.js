@@ -11,9 +11,8 @@ angular.module('me', [
 ])
 
     .config([
-        '$locationProvider',
         '$routeProvider',
-        function($locationProvider, $routeProvider) {
+        function($routeProvider) {
             // Routes
             $routeProvider
                 .when('/about', {
@@ -31,8 +30,6 @@ angular.module('me', [
                 .otherwise({
                     redirectTo: '/home'
                 });
-
-            $locationProvider.html5Mode(true);
         }
     ])
 
