@@ -11,8 +11,9 @@ angular.module('me', [
 ])
 
     .config([
+        '$locationProvider',
         '$routeProvider',
-        function($routeProvider) {
+        function($locationProvider, $routeProvider) {
             // Routes
             $routeProvider
                 .when('/about', {
@@ -28,20 +29,22 @@ angular.module('me', [
                     templateUrl: './src/resume/resume.tpl.html'
                 })
                 .otherwise({
-                    redirectTo: '/about'
+                    redirectTo: '/home'
                 });
+
+            $locationProvider.html5Mode(true);
         }
     ])
 
     .controller('IndexController', [
         '$anchorScroll',
-        '$rootScope',
-        function($anchorScroll, $rootScope) {
+        '$scope',
+        function($anchorScroll, $scope) {
             var that = this;
 
-            $rootScope.name = 'Catherine Shing';
+            $scope.name = 'Catherine Shing';
 
-            this.view = 'about';
+            this.view = 'home';
 
             this.loadView = function(view) {
                 that.view = view;
