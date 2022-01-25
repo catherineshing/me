@@ -11,6 +11,7 @@ angular.module('me.resume', [])
                     tools: [
                         'OS X',
                         'Sublime Text',
+                        'VS Code,'
                         'Terminal',
                         'GitHub'
                     ]
@@ -18,10 +19,7 @@ angular.module('me.resume', [])
                 {
                     title: 'Languages',
                     tools: [
-                        'Javascript',
-                        'Java',
-                        'PHP',
-                        'Ruby'
+                        'Javascript'
                     ]
                 },
                 {
@@ -29,28 +27,20 @@ angular.module('me.resume', [])
                     tools: [
                         'Karma',
                         'Jasmine',
-                        'JUnit',
-                        'TestNG'
+                        'Jest'
                     ]
                 },
                 {
                     title: 'Topics',
                     tools: [
+                        'React',
                         'AngularJS',
                         'Node.js',
-                        'Bootstrap',
-                        'Grunt',
-                        'HTML5',
-                        'jQuery',
-                        'CSS',
-                        'Less.js',
                         'Express',
                         'MongoDB',
-                        'Thrift',
-                        'Eclipse',
-                        'JIRA',
-                        'Subversion',
-                        'API design'
+                        'SCSS',
+                        'Less.js',
+                        'Thrift'
                     ]
                 }
             ];
@@ -69,26 +59,11 @@ angular.module('me.resume', [])
                         'Created Facebook \'Customer Reviews\' App using PHP, jQuery, and Javascript for businesses to display positive testimonials on their Facebook page and allow visitors to request an appointment with the business.',
                         'Wrote backend functionality for a variety of features using Java, PHP, Ruby, Spring, TestNG, JUnit, and more.'
                     ]
-                },
-                {
-                    company: 'The Cheesecake Factory',
-                    location: 'Santa Clara, CA',
-                    startDate: 1204358400000,
-                    endDate: 1306825200000,
-                    title: 'Operations Support Technician'
-                },
-                {
-                    company: 'Independent Capital Management',
-                    location: 'San Diego, CA',
-                    startDate: 1175410800000,
-                    endDate: 1201766400000,
-                    title: 'Financial Services Specialist'
                 }
             ];
 
             this.education = {
                 university: 'University of California, San Diego',
-                graduatedDate: 1181977200000,
                 degree: 'B.A. Mathematics/Applied Science'
             };
         }
