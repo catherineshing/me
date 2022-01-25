@@ -11,7 +11,7 @@ angular.module('me.resume', [])
                     tools: [
                         'OS X',
                         'Sublime Text',
-                        'VS Code,'
+                        'VS Code',
                         'Terminal',
                         'GitHub'
                     ]
